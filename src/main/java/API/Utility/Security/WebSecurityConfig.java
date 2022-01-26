@@ -1,6 +1,5 @@
-package API.Utility;
+package API.Utility.Security;
 
-import com.bibliotheque.API.Utility.JWTAuthorizationFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -24,7 +23,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .addFilterAfter(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/user/*").authenticated()
+               // .antMatchers(HttpMethod.GET, "/user/id*").authenticated()
                 .anyRequest().permitAll();
     }
 }

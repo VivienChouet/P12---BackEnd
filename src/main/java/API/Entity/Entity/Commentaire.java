@@ -12,6 +12,7 @@ import java.util.Date;
 public class Commentaire {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
 
     String commentaire;

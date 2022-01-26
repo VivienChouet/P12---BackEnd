@@ -1,25 +1,23 @@
 package API.Entity.Entity;
 
-import lombok.*;
+import lombok.Data;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
-@Entity(name = "User")
+@Entity
 @Table(name = "user")
 public class User {
 
     @Id
-    Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
-    String firstName;
-    String lastName;
-    String email;
-    String password;
-    String token;
+    public String firstName;
+    public String lastName;
+    public String email;
+    public String password;
+    private String token;
 
 
 }

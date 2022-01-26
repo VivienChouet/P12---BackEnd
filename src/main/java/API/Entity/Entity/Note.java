@@ -10,14 +10,17 @@ import javax.persistence.*;
 public class Note {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
-
     Integer note;
 
     @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
+
     @ManyToOne
+    @JoinColumn(name = "chateau_id")
     private Chateau chateau;
 
 }

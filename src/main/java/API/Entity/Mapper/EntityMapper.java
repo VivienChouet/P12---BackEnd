@@ -1,5 +1,4 @@
 package API.Entity.Mapper;
-
 import java.util.List;
 
 public interface EntityMapper<D,E> {
