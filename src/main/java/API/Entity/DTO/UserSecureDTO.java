@@ -7,7 +7,10 @@ import java.io.Serializable;
 @Data
 public class UserSecureDTO implements Serializable {
 
+     public Integer id;
      public String firstName;
-     public String LastName;
+     public String lastName;
+     public String email;
+     public String role;
 
 }

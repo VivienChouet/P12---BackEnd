@@ -44,5 +44,46 @@ public class NoteService {
         return null;
     }
 
+// delete note by id
 
+    /**
+     * Delete note by id
+     * @param note
+     */
+    public void deleteNote(Note note) {
+        logger.info("delete note : " + note.getId());
+        noteRepository.delete(note);
+    }
+
+// find by id note
+
+    /**
+     * Find note by id
+     * @param id
+     * @return
+     */
+    public Note findById(int id) {
+        logger.info("find note by id : " + id);
+        return noteRepository.findById(id).get();
+    }
+
+//update Note only if the user is the owner of the note
+
+    /**
+     * Update note only if the user is the owner of the note
+     * @param note
+     * @return
+     */
+    public Note updateNote(Note note) {
+        Note noteCheck = noteRepository.findById(note.getId()).get();
+        if (noteCheck.getUser().getId() == note.getUser().getId()) {
+            logger.info("update note : " + note.getId());
+            noteRepository.save(note);
+            return note;
+        }
+        return null;
+    }
 }
+
+
+

@@ -55,6 +55,12 @@ public class CommentaireController {
 }
 
     // delete by Modo / Admin only
+    @DeleteMapping("{id}")
+    public ResponseEntity<Commentaire> deleteComment(@PathVariable int id){
+        commentaireService.delete(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 
     // update report by user
 

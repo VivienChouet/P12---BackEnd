@@ -33,5 +33,31 @@ public class NoteController {
         return new ResponseEntity<>(HttpStatus.CONFLICT);
     }
 
+// delete note by id
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Note> deleteNote (@PathVariable int id){
+        Note note = noteService.findById(id);
+        if(note != null) {
+            noteService.deleteNote(note);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.CONFLICT);
+    }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Note> updateNote(@PathVariable int id, @RequestBody Note note){
+        Note note1 = noteService.findById(id);
+        if(note1 != null){
+            note1.setNote(note.getNote());
+            noteService.updateNote(note1);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
 }
+
+
+
+
+
+

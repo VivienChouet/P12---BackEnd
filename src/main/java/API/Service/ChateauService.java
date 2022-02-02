@@ -1,7 +1,6 @@
 package API.Service;
 
-import API.Entity.DTO.ChateauDto;
-import API.Entity.DTO.ChateauWithoutLinkDTO;
+import API.Entity.DTO.ChateauSecureDTO;
 import API.Entity.Entity.Chateau;
 import API.Repository.ChateauRepository;
 import API.Utility.LoggingController;
@@ -28,7 +27,7 @@ public class ChateauService {
      * @param chateauDto
      * @return
      */
-    public Chateau saveNewChateau(ChateauWithoutLinkDTO chateauDto) {
+    public Chateau saveNewChateau(ChateauSecureDTO chateauDto) {
         logger.info("chateau DTO test = " + chateauDto);
         logger.info("Chateau DTO test id = " + chateauDto.getResponsable());
         Chateau chateau = new Chateau();
@@ -36,7 +35,7 @@ public class ChateauService {
         chateau.setNumeroAdresse(chateauDto.getNumeroAdresse());
         chateau.setCodePostal(chateauDto.getCodePostal());
         chateau.setName(chateauDto.getName());
-        chateau.setResponsable(userService.findById(chateauDto.getResponsable()));
+        chateau.setResponsable(userService.findById(chateauDto.getResponsable().getId()));
         chateauRepository.save(chateau);
         logger.info("save New Chateau = " + chateau.getName());
         return chateau;
@@ -73,6 +72,22 @@ public class ChateauService {
         return  chateaux;
     }
 
+    // convert a list of chateau to a list of chateauSecureDTO
+
+    /**
+     * Convert list Chateau to list ChateauSecureDTO
+     * @param chateaux
+     * @return
+     */
+    public List<ChateauSecureDTO> convertToChateauSecureDTO(List<Chateau> chateaux) {
+        List<ChateauSecureDTO> secureDTOs = new java.util.ArrayList<>();
+        for (Chateau chateau : chateaux) {
+            secureDTOs.add(convertToSecure(chateau));
+        }
+        return secureDTOs;
+    }
+
+
     /**
      * Search List Chateaux By Name
      * @param name
@@ -82,5 +97,18 @@ public class ChateauService {
         logger.info("search chateau : " + name);
         List chateaux = chateauRepository.findByName(name);
         return chateaux;
+    }
+
+    public ChateauSecureDTO convertToSecure(Chateau chateau) {
+        ChateauSecureDTO secureDTO = new ChateauSecureDTO();
+        secureDTO.setId(chateau.getId());
+        secureDTO.setName(chateau.getName());
+        secureDTO.setAdresse(chateau.getAdresse());
+        secureDTO.setCodePostal(chateau.getCodePostal());
+        secureDTO.setNumeroAdresse(chateau.getNumeroAdresse());
+        secureDTO.setResponsable(userService.convertToSecure(chateau.getResponsable()));
+
+        logger.info("convert DTO Chateau to a Secure DTO");
+        return secureDTO;
     }
 }

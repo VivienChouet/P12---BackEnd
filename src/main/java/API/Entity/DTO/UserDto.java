@@ -7,6 +7,7 @@ import java.io.Serializable;
 @Data
 public class UserDto implements Serializable {
 
+
     private Integer id;
 
     public String firstName;
@@ -14,5 +15,6 @@ public class UserDto implements Serializable {
     public String email;
     public String password;
     private String token;
+    private String role;
 
 }

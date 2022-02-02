@@ -1,7 +1,7 @@
 package API.Controller;
 
 import API.Entity.DTO.ChateauDto;
-import API.Entity.DTO.ChateauWithoutLinkDTO;
+import API.Entity.DTO.ChateauSecureDTO;
 import API.Entity.Entity.Chateau;
 import API.Entity.Mapper.ChateauMapper;
 import API.Service.ChateauService;
@@ -23,18 +23,20 @@ public class ChateauController {
     @Autowired
     ChateauMapper chateauMapper;
 
+
     @PostMapping("/")
-    public ResponseEntity<ChateauDto> newChateau (@RequestBody ChateauWithoutLinkDTO chateauDto){
+    public ResponseEntity<ChateauDto> newChateau (@RequestBody ChateauSecureDTO chateauDto){
       //todo securiser cette methode en amdin only
         chateauService.saveNewChateau(chateauDto);
         return new ResponseEntity(HttpStatus.ACCEPTED);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ChateauDto> chateauById (@PathVariable int id){
+    public ResponseEntity<ChateauSecureDTO> chateauById (@PathVariable int id){
         Chateau chateau = chateauService.findById(id);
         if (chateau != null) {
-            return new ResponseEntity<ChateauDto>(chateauMapper.toDto(chateau), HttpStatus.OK);
+        ChateauSecureDTO secureDTO = chateauService.convertToSecure(chateau);
+            return new ResponseEntity<>(secureDTO, HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
@@ -42,7 +44,8 @@ public class ChateauController {
     @GetMapping("/")
     public ResponseEntity<List<ChateauDto>> listAllChateau (){
         List chateaux = chateauService.findAll();
-        return new ResponseEntity<>(chateauMapper.toDto(chateaux), HttpStatus.OK);
+        List chateauSecureDTO = chateauService.convertToChateauSecureDTO(chateaux);
+        return new ResponseEntity<>(chateauSecureDTO, HttpStatus.OK);
     }
 
 

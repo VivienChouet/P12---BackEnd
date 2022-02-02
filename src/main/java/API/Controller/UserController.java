@@ -69,14 +69,9 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<User>login(@RequestBody UserDto userDto) {
-
-        if (userService.loginUser(userDto.email, userDto.password)) {
-            String token = JWT.createJWT(userDto.email, 60000);
-            User user = new User();
-            user.setEmail(userDto.email);
-            user.setToken(token);
+    User user = userService.loginUser(userDto.email, userDto.password);
+        if (user != null) {
             return new ResponseEntity<>(user, HttpStatus.OK) ;
-
         }
         return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
     }

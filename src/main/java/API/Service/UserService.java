@@ -1,6 +1,7 @@
 package API.Service;
 
 import API.Entity.DTO.UserDto;
+import API.Entity.DTO.UserSecureDTO;
 import API.Entity.Entity.User;
 import API.Repository.UserRepository;
 import API.Utility.Security.JWT;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import static API.Utility.Security.JWT.createJWT;
 import static API.Utility.Security.JWT.decodeJWT;
 
 @Service
@@ -37,6 +39,7 @@ public class UserService {
         if(emailExists(user.getEmail())) {
             logger.info("new user = " + user.getFirstName());
             user.setPassword(passwordEncoder.encode(user.getPassword()));
+            user.setRole("USER");
             userRepository.save(user);
             return user;
         }
@@ -45,6 +48,8 @@ public class UserService {
             return null;
         }
     }
+
+
 
     /**
      * Find User By Id
@@ -72,15 +77,19 @@ public class UserService {
      * @param password
      * @return boolean
      */
-    public Boolean loginUser(String email, String password) {
+    public User loginUser(String email, String password) {
         logger.info("check login in progress");
         User user1 = userRepository.findByEmail(email);
         if (passwordEncoder.matches(password, user1.getPassword())) {
+            User user = new User();
+            user.setId(user1.getId());
+            String token = createJWT(email, 600000);
+            user.setToken(token);
             logger.info("Check login success");
-            return true;
+            return user;
         }
         logger.info("check login failed");
-        return false;
+        return null;
     }
 
     /**
@@ -91,20 +100,22 @@ public class UserService {
     public User findUserByToken(String token) {
         String jwtToken = token.replace("Bearer ", "");
         String username = decodeJWT(jwtToken).getSubject();
-        User user = new User();
-        user = userRepository.findByFirstName(username);
+        User user = userRepository.findByFirstName(username);
         return user;
     }
 
     /**
-     * Check Email
+     * Check Email Exist
      * @param email
-     * @return boolean
+     * @return true if email exist
+     * @return false if email not exist
      */
-    public boolean emailExists(final String email) {
-        logger.info("find if email exist");
-        return userRepository.findByEmail(email) == null;
+
+    public boolean emailExists(String email) {
+        logger.info("check email exist");
+        return userRepository.existsByEmail(email);
     }
+
 
     /**
      * Update User
@@ -126,6 +137,9 @@ public class UserService {
         if (userDTO.password != null) {
             user.setPassword(passwordEncoder.encode(userDTO.getPassword()));
         }
+        if (userDTO.getRole() != null) {
+            user.setRole(userDTO.getRole());
+        }
         userRepository.save(user);
         String token = JWT.createJWT(user.getEmail(), 60000);
         user.setToken(token);
@@ -133,11 +147,29 @@ public class UserService {
         return user;
     }
 
+
+
     /**
      * List of All User
      * @return List<User>
      */
     public List<User> findAll() {
         return userRepository.findAll();
+    }
+
+    /**
+     * Set a DTO without any sensible informations
+     * @param user
+     * @return
+     */
+    public UserSecureDTO convertToSecure(User user) {
+        UserSecureDTO secureDTO = new UserSecureDTO();
+        secureDTO.setId(user.getId());
+        secureDTO.setFirstName(user.getFirstName());
+        secureDTO.setLastName(user.getLastName());
+        secureDTO.setEmail(user.getEmail());
+        secureDTO.setRole(user.getRole());
+        logger.info("convert to Secure User");
+        return secureDTO;
     }
 }

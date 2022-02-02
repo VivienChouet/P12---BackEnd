@@ -54,4 +54,32 @@ public class CommentaireService {
         }
         return null;
     }
+
+    /**
+     * Delete a commentaire
+     * @param id
+     */
+    public void delete(int id) {
+        Commentaire commentaire = commentaireRepository.findById(id).get();
+        commentaireRepository.delete(commentaire);
+        logger.info("delete commente id : " + id );
+    }
+
+    //Update commentaire if user is the owner
+
+    /**
+     * Update commentaire
+     * @param commentaire
+     * @return
+     */
+    public Commentaire updateCommentaire(Commentaire commentaire) {
+        Commentaire commentaireToUpdate = commentaireRepository.findById(commentaire.getId()).get();
+        if(commentaireToUpdate.getUser().getId() == commentaire.getUser().getId()){
+            commentaireToUpdate.setCommentaire(commentaire.getCommentaire());
+            commentaireRepository.save(commentaireToUpdate);
+            logger.info("update commentaire id : " + commentaire.getId());
+            return commentaireToUpdate;
+        }
+        return null;
+    }
 }

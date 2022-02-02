@@ -18,6 +18,7 @@ public class User {
     public String email;
     public String password;
     private String token;
+    private String role;
 
 
 }
