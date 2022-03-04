@@ -49,8 +49,6 @@ public class UserService {
         }
     }
 
-
-
     /**
      * Find User By Id
      * @param id
@@ -116,7 +114,6 @@ public class UserService {
         return userRepository.existsByEmail(email);
     }
 
-
     /**
      * Update User
      * @param id
@@ -147,8 +144,6 @@ public class UserService {
         return user;
     }
 
-
-
     /**
      * List of All User
      * @return List<User>
@@ -171,5 +166,19 @@ public class UserService {
         secureDTO.setRole(user.getRole());
         logger.info("convert to Secure User");
         return secureDTO;
+    }
+
+    //return id of user connected
+
+    /**
+     * return user of user connected
+     * @param token
+     * @return
+     */
+    public User connectedUserId(String token) {
+        String jwtToken = token.replace("Bearer ", "");
+        String email = decodeJWT(jwtToken).getSubject();
+        User user = userRepository.findByEmail(email);
+        return user;
     }
 }

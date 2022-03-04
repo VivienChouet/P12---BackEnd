@@ -1,6 +1,10 @@
 package API.Service;
 
+import API.Entity.DTO.CommentaireSecureDTO;
+import API.Entity.DTO.NewCommentaireDTO;
+import API.Entity.Entity.Chateau;
 import API.Entity.Entity.Commentaire;
+import API.Repository.ChateauRepository;
 import API.Repository.CommentaireRepository;
 import API.Utility.LoggingController;
 import org.slf4j.Logger;
@@ -8,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -18,15 +23,22 @@ public class CommentaireService {
     @Autowired
     CommentaireRepository commentaireRepository;
 
+@Autowired
+ChateauService chateauService;
+
+@Autowired
+UserService userService;
+
     /**
-     * Find all commentaire by Chateau_Id
+     * find commentaire by chateau_id
      * @param id
-     * @return List<Commentaire>
+     * @return
      */
-    public List<Commentaire> findByChateau_Id(int id) {
+    public List<CommentaireSecureDTO> findByChateau_Id(int id) {
         logger.info("find commentaire by Chateau-id : " + id);
         List<Commentaire> commentaires = commentaireRepository.findByChateau_Id(id);
-        return  commentaires;
+        List<CommentaireSecureDTO> commentaireSecureDTOS = convertListCommentaireToListCommentaireSecure(commentaires);
+        return  commentaireSecureDTOS;
     }
 
     /**
@@ -34,20 +46,25 @@ public class CommentaireService {
      * @param id
      * @return
      */
-    public List<Commentaire> findByUser_Id(int id) {
+    public List<CommentaireSecureDTO> findByUser_Id(int id) {
         logger.info("find Commentaire By User_Id id : " + id);
         List<Commentaire> commentaires = commentaireRepository.findByUser_Id(id);
-        return commentaires;
+        List<CommentaireSecureDTO> commentaireSecureDTOS = convertListCommentaireToListCommentaireSecure(commentaires);
+        return commentaireSecureDTOS;
     }
 
     /**
-     * Add New commentaire
-     * @param commentaire
+     * Create a new commentaire
+     * @param newCommentaireDTO
      * @return
      */
-    public Commentaire newCommentaire(Commentaire commentaire) {
-        List<Commentaire> commentaires = commentaireRepository.findByUser_IdAndChateau_Id(commentaire.getUser().getId(), commentaire.getChateau().getId());
-        if(commentaires.size() != 0){
+    public Commentaire newCommentaire(NewCommentaireDTO newCommentaireDTO, String token) {
+        List<Commentaire> commentaires = commentaireRepository.findByUser_IdAndChateau_Id(userService.connectedUserId(token).getId(), newCommentaireDTO.id_chateau);
+        if(commentaires.size() == 0){
+            Commentaire commentaire = new Commentaire();
+            commentaire.setCommentaire(newCommentaireDTO.commentaire);
+            commentaire.setChateau(chateauService.findById(newCommentaireDTO.id_chateau));
+            commentaire.setUser(userService.findById(userService.connectedUserId(token).getId()));
             commentaireRepository.save(commentaire);
             logger.info("new commentaire id : " + commentaire.getId());
             return commentaire;
@@ -72,14 +89,32 @@ public class CommentaireService {
      * @param commentaire
      * @return
      */
-    public Commentaire updateCommentaire(Commentaire commentaire) {
+    public Commentaire updateCommentaire(Commentaire commentaire, String token) {
         Commentaire commentaireToUpdate = commentaireRepository.findById(commentaire.getId()).get();
-        if(commentaireToUpdate.getUser().getId() == commentaire.getUser().getId()){
+        if(commentaireToUpdate.getUser().getId() == userService.connectedUserId(token).getId()){
             commentaireToUpdate.setCommentaire(commentaire.getCommentaire());
             commentaireRepository.save(commentaireToUpdate);
             logger.info("update commentaire id : " + commentaire.getId());
             return commentaireToUpdate;
         }
         return null;
+    }
+
+    /**
+     * Convert List Commentaire to List CommentaireSecureDTO
+     * @param commentaires
+     * @return
+     */
+    public List<CommentaireSecureDTO>convertListCommentaireToListCommentaireSecure (List<Commentaire> commentaires){
+        List<CommentaireSecureDTO> commentaireSecureDTOS = new ArrayList<>();
+        CommentaireSecureDTO commentaireSecureDTO = new CommentaireSecureDTO();
+        for (Commentaire commentaire : commentaires) {
+            commentaireSecureDTO.id = commentaire.getId();
+            commentaireSecureDTO.commentaire = commentaire.getCommentaire();
+            commentaireSecureDTO.setChateau(chateauService.convertToSecure(commentaire.getChateau()));
+            commentaireSecureDTO.setUser(userService.convertToSecure(commentaire.getUser()));
+            commentaireSecureDTOS.add(commentaireSecureDTO);
+        }
+        return commentaireSecureDTOS;
     }
 }

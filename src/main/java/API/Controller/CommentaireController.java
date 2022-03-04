@@ -1,6 +1,8 @@
 package API.Controller;
 
 import API.Entity.DTO.CommentaireDto;
+import API.Entity.DTO.CommentaireSecureDTO;
+import API.Entity.DTO.NewCommentaireDTO;
 import API.Entity.Entity.Commentaire;
 import API.Entity.Mapper.CommentaireMapper;
 import API.Service.CommentaireService;
@@ -23,27 +25,27 @@ public class CommentaireController {
 
     // Get by chateau_id
     @GetMapping("/chateau/{id}")
-    public ResponseEntity<List<CommentaireDto>> commentairesByChateau(@PathVariable int id) {
-        List<Commentaire> commentaires = commentaireService.findByChateau_Id(id);
-        return new ResponseEntity<>(commentaireMapper.toDto(commentaires), HttpStatus.OK);
+    public ResponseEntity<List<CommentaireSecureDTO>> commentairesByChateau(@PathVariable int id) {
+        List<CommentaireSecureDTO> commentaires = commentaireService.findByChateau_Id(id);
+        return new ResponseEntity<>(commentaires, HttpStatus.OK);
     }
 
     // get by user_id en admin / modo only
     //todo : méthode a sécuriser modo / admin only.
     @GetMapping("/gestion/{id}")
-    public ResponseEntity<List<CommentaireDto>> commentaireByUser_Id(@PathVariable int id) {
-        List<Commentaire> commentaires = commentaireService.findByUser_Id(id);
-        return new ResponseEntity<>(commentaireMapper.toDto(commentaires), HttpStatus.OK);
+    public ResponseEntity<List<CommentaireSecureDTO>> commentaireByUser_Id(@PathVariable int id) {
+        List<CommentaireSecureDTO> commentaires = commentaireService.findByUser_Id(id);
+        return new ResponseEntity<>(commentaires, HttpStatus.OK);
     }
 
     // post
     @PostMapping("/")
-    public ResponseEntity<Commentaire> newCommentaire(@RequestBody CommentaireDto commentaireDto) {
-        Commentaire commentaire = commentaireService.newCommentaire(commentaireMapper.toEntity(commentaireDto));
+    public ResponseEntity<Commentaire> newCommentaire(@RequestBody NewCommentaireDTO newCommentaireDTO,@RequestHeader("Authorization") String token){
+        Commentaire commentaire = commentaireService.newCommentaire(newCommentaireDTO, token);
         if (commentaire != null) {
             return new ResponseEntity<>(HttpStatus.OK);
         }
-        return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+        return new ResponseEntity<>(HttpStatus.CONFLICT);
     }
 
     // update by creator only

@@ -9,7 +9,7 @@ public class NoteSecureDTO implements Serializable {
 
     public  Integer id;
     public  Integer note;
-    public UserSecureDTO user;
+    public  UserSecureDTO user;
     public  ChateauSecureDTO chateau;
 
 }

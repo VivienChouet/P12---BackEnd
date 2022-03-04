@@ -1,6 +1,8 @@
 package API.Controller;
 
 
+import API.Entity.DTO.NewNoteDTO;
+import API.Entity.DTO.NoteSecureDTO;
 import API.Entity.Entity.Note;
 import API.Service.NoteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +27,8 @@ public class NoteController {
     }
 
     @PostMapping("/")
-    public ResponseEntity<Note> addNote (@RequestBody Note note){
-        Note note1 = this.noteService.saveNewNote(note);
+    public ResponseEntity<Note> addNote (@RequestBody NewNoteDTO newNoteDTO, @RequestHeader("Authorization") String token){
+        Note note1 = this.noteService.saveNewNote(newNoteDTO, token);
         if(note1 != null) {
             return new ResponseEntity<>(HttpStatus.OK);
         }
@@ -35,7 +37,7 @@ public class NoteController {
 
 // delete note by id
     @DeleteMapping("/{id}")
-    public ResponseEntity<Note> deleteNote (@PathVariable int id){
+    public ResponseEntity<NoteSecureDTO> deleteNote (@PathVariable int id){
         Note note = noteService.findById(id);
         if(note != null) {
             noteService.deleteNote(note);
