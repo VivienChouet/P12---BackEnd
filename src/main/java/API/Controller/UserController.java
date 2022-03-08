@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -29,6 +30,7 @@ public class UserController {
      * @param userDto
      * @return user null if email already exist
      */
+    @CrossOrigin("http://localhost:4200")
     @PostMapping("/")
     public ResponseEntity<UserDto> newUser (@RequestBody UserDto userDto){
         User user = userService.saveNewUser(userMapper.toEntity(userDto));
@@ -67,8 +69,12 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    //TODO: mettre sécurité si le user n'existe pas car actuellement si le user n'existe pas on a une erreur 500
+
+    @CrossOrigin("http://localhost:4200")
     @PostMapping("/login")
     public ResponseEntity<User>login(@RequestBody UserDto userDto) {
+        System.out.println(userDto );
     User user = userService.loginUser(userDto.email, userDto.password);
         if (user != null) {
             return new ResponseEntity<>(user, HttpStatus.OK) ;
@@ -80,8 +86,8 @@ public class UserController {
     public ResponseEntity<UserDto> userToken(@RequestHeader("Authorization") String token) {
         System.out.println(token);
         if (token != null) {
-            User user = userService.findUserByToken(token);
-            return new ResponseEntity<>(userMapper.toDto(user), HttpStatus.OK);
+           User user = userService.findUserByToken(token);
+           return new ResponseEntity<>(userMapper.toDto(user), HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }

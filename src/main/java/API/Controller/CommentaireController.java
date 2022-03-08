@@ -1,6 +1,5 @@
 package API.Controller;
 
-import API.Entity.DTO.CommentaireDto;
 import API.Entity.DTO.CommentaireSecureDTO;
 import API.Entity.DTO.NewCommentaireDTO;
 import API.Entity.Entity.Commentaire;
@@ -40,7 +39,7 @@ public class CommentaireController {
 
     // post
     @PostMapping("/")
-    public ResponseEntity<Commentaire> newCommentaire(@RequestBody NewCommentaireDTO newCommentaireDTO,@RequestHeader("Authorization") String token){
+    public ResponseEntity<Commentaire> newCommentaire(@RequestBody NewCommentaireDTO newCommentaireDTO, @RequestHeader("Authorization") String token) {
         Commentaire commentaire = commentaireService.newCommentaire(newCommentaireDTO, token);
         if (commentaire != null) {
             return new ResponseEntity<>(HttpStatus.OK);
@@ -49,23 +48,22 @@ public class CommentaireController {
     }
 
     // update by creator only
-@PutMapping("/{id}")
-    public ResponseEntity<Commentaire> updateCommentaire(@PathVariable int id){
+    @PutMapping("/{id}")
+    public ResponseEntity<Commentaire> updateCommentaire(@PathVariable int id) {
 
 
         return new ResponseEntity<>(HttpStatus.OK);
-}
+    }
 
     // delete by Modo / Admin only
     @DeleteMapping("{id}")
-    public ResponseEntity<Commentaire> deleteComment(@PathVariable int id){
+    public ResponseEntity<Commentaire> deleteComment(@PathVariable int id) {
         commentaireService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
 
     // update report by user
-
 
 
 }

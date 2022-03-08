@@ -37,16 +37,17 @@ public class UserService {
     public User saveNewUser(User user)
     {
         if(emailExists(user.getEmail())) {
+            logger.warn("email exist");
+            return null;
+        }
+        else{
             logger.info("new user = " + user.getFirstName());
             user.setPassword(passwordEncoder.encode(user.getPassword()));
             user.setRole("USER");
             userRepository.save(user);
             return user;
         }
-        else{
-            logger.warn("email exist");
-            return null;
-        }
+
     }
 
     /**
