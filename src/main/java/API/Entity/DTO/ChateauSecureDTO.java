@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class ChateauDto implements Serializable {
+public class ChateauSecureDTO implements Serializable {
 
     public  Integer id;
     public  String name;
@@ -13,5 +13,5 @@ public class ChateauDto implements Serializable {
     public  Integer codePostal;
     public  String adresse;
     public String description;
-    public  UserDto responsable;
+    public  UserSecureDTO responsable;
 }

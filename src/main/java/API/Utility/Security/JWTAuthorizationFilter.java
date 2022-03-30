@@ -1,4 +1,4 @@
-package API.Utility;
+package API.Utility.Security;
 
 import io.jsonwebtoken.*;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

@@ -1,4 +1,4 @@
-package API.Utility;
+package API.Utility.Security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
@@ -16,11 +16,11 @@ import java.util.stream.Collectors;
 
 public class JWT {
     /**
-     * @param username
+     * @param email
      * @param ttlMillis
      * @return Bearer Token
      */
-    public static String createJWT(String username, long ttlMillis) {
+    public static String createJWT(String email, long ttlMillis) {
 
         String SECRET_KEY = "mySecretKey";
 
@@ -39,7 +39,7 @@ public class JWT {
 
         //Let's set the JWT Claims
         JwtBuilder builder = Jwts.builder().setId("id")
-                .setSubject(username)
+                .setSubject(email)
                 .setIssuedAt(now)
                 .claim("authorities",
                         grantedAuthorities.stream()

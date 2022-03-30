@@ -10,13 +10,14 @@ import javax.persistence.*;
 public class Chateau {
 
     @Id
-    Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   public Integer id;
 
-    String name;
-
-    Integer numeroAdresse;
-    Integer codePostal;
-    String adresse;
+   public String name;
+   public Integer numeroAdresse;
+   public Integer codePostal;
+   public String adresse;
+   public String description;
 
     @ManyToOne
     private User responsable;

@@ -33,4 +33,7 @@ build/
 .vscode/
 
 ### Application Properties ###
-src/main/resources/application.properties
+.properties
+
+### Log ###
+.# Log file name (for instance, `app.log`)

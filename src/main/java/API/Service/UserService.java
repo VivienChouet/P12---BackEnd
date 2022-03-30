@@ -1,18 +1,21 @@
 package API.Service;
 
 import API.Entity.DTO.UserDto;
+import API.Entity.DTO.UserSecureDTO;
 import API.Entity.Entity.User;
 import API.Repository.UserRepository;
-import API.Utility.JWT;
+import API.Utility.Security.JWT;
 import API.Utility.LoggingController;
-import com.sun.xml.bind.v2.TODO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import static API.Utility.JWT.decodeJWT;
+import java.util.List;
+
+import static API.Utility.Security.JWT.createJWT;
+import static API.Utility.Security.JWT.decodeJWT;
 
 @Service
 public class UserService {
@@ -28,29 +31,33 @@ public class UserService {
     /**
      * Save New User
      * @param user
-     * @return
+     * @return user if email not exist
+     * @return null if email exist
      */
-    public User saveNewUser(User user) {
-        User save = new User();
-        logger.info("test save = " + user);
-        // todo-me mettre en place un systeme de verification de mail
-        save.setPassword(passwordEncoder.encode(user.getPassword()));
-        save.setFirstName(user.getFirstName());
-        save.setLastName(user.getLastName());
-        save.setEmail(user.getEmail());
-        userRepository.save(save);
-        logger.info("save new user = " + save.getFirstName());
-        return save;
+    public User saveNewUser(User user)
+    {
+        if(emailExists(user.getEmail())) {
+            logger.warn("email exist");
+            return null;
+        }
+        else{
+            logger.info("new user = " + user.getFirstName());
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
+            user.setRole("USER");
+            userRepository.save(user);
+            return user;
+        }
+
     }
 
     /**
      * Find User By Id
      * @param id
-     * @return
+     * @return User
      */
     public User findById (int id){
-        User user = new User();
-        user = userRepository.getById(id);
+        logger.info("find user by id : id " + id);
+        User user = userRepository.getById(id);
         return user;
     }
 
@@ -64,50 +71,55 @@ public class UserService {
     }
 
     /**
-     * Login Check
-     * @param user
+     * Login Check by Email & Password
+     * @param email
      * @param password
-     * @return
+     * @return boolean
      */
-    public Boolean loginUser(String user, String password) {
+    public User loginUser(String email, String password) {
         logger.info("check login in progress");
-        User user1 = userRepository.findByFirstName(user);
+        User user1 = userRepository.findByEmail(email);
         if (passwordEncoder.matches(password, user1.getPassword())) {
+            User user = new User();
+            user.setId(user1.getId());
+            String token = createJWT(email, 600000);
+            user.setToken(token);
             logger.info("Check login success");
-            return true;
+            return user;
         }
         logger.info("check login failed");
-        return false;
+        return null;
     }
 
     /**
      * Find User With Token
      * @param token
-     * @return
+     * @return user
      */
     public User findUserByToken(String token) {
         String jwtToken = token.replace("Bearer ", "");
         String username = decodeJWT(jwtToken).getSubject();
-        User user = new User();
-        user = userRepository.findByFirstName(username);
+        User user = userRepository.findByFirstName(username);
         return user;
     }
 
     /**
-     * Check Email
+     * Check Email Exist
      * @param email
-     * @return
+     * @return true if email exist
+     * @return false if email not exist
      */
-    public boolean emailExists(final String email) {
-        logger.info("find if email exist");
-        return userRepository.findByEmail(email) == null;
+
+    public boolean emailExists(String email) {
+        logger.info("check email exist");
+        return userRepository.existsByEmail(email);
     }
 
     /**
      * Update User
      * @param id
      * @param userDTO
-     * @return
+     * @return user
      */
     public User update(int id, UserDto userDTO) {
         User user = this.findById(id);
@@ -123,10 +135,51 @@ public class UserService {
         if (userDTO.password != null) {
             user.setPassword(passwordEncoder.encode(userDTO.getPassword()));
         }
+        if (userDTO.getRole() != null) {
+            user.setRole(userDTO.getRole());
+        }
         userRepository.save(user);
-        String token = JWT.createJWT(user.getFirstName(), 60000);
+        String token = JWT.createJWT(user.getEmail(), 60000);
         user.setToken(token);
         logger.info("user : " + user.getFirstName() + " mis a jour");
+        return user;
+    }
+
+    /**
+     * List of All User
+     * @return List<User>
+     */
+    public List<User> findAll() {
+        return userRepository.findAll();
+    }
+
+    /**
+     * Set a DTO without any sensible informations
+     * @param user
+     * @return
+     */
+    public UserSecureDTO convertToSecure(User user) {
+        UserSecureDTO secureDTO = new UserSecureDTO();
+        secureDTO.setId(user.getId());
+        secureDTO.setFirstName(user.getFirstName());
+        secureDTO.setLastName(user.getLastName());
+        secureDTO.setEmail(user.getEmail());
+        secureDTO.setRole(user.getRole());
+        logger.info("convert to Secure User");
+        return secureDTO;
+    }
+
+    //return id of user connected
+
+    /**
+     * return user of user connected
+     * @param token
+     * @return
+     */
+    public User connectedUserId(String token) {
+        String jwtToken = token.replace("Bearer ", "");
+        String email = decodeJWT(jwtToken).getSubject();
+        User user = userRepository.findByEmail(email);
         return user;
     }
 }
