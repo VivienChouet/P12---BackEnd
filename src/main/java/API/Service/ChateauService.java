@@ -35,6 +35,7 @@ public class ChateauService {
         chateau.setNumeroAdresse(chateauDto.getNumeroAdresse());
         chateau.setCodePostal(chateauDto.getCodePostal());
         chateau.setName(chateauDto.getName());
+        chateau.setDescription(chateauDto.getDescription());
         chateau.setResponsable(userService.findById(chateauDto.getResponsable().getId()));
         chateauRepository.save(chateau);
         logger.info("save New Chateau = " + chateau.getName());
@@ -106,6 +107,7 @@ public class ChateauService {
         secureDTO.setAdresse(chateau.getAdresse());
         secureDTO.setCodePostal(chateau.getCodePostal());
         secureDTO.setNumeroAdresse(chateau.getNumeroAdresse());
+        secureDTO.setDescription(chateau.getDescription());
         secureDTO.setResponsable(userService.convertToSecure(chateau.getResponsable()));
 
         logger.info("convert DTO Chateau to a Secure DTO");

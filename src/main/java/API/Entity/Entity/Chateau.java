@@ -17,6 +17,7 @@ public class Chateau {
    public Integer numeroAdresse;
    public Integer codePostal;
    public String adresse;
+   public String description;
 
     @ManyToOne
     private User responsable;
