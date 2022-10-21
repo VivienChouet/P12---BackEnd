@@ -1,5 +1,6 @@
 package API.Service;
 
+import API.Entity.DTO.ChateauSecureDTO;
 import API.Entity.DTO.CommentaireSecureDTO;
 import API.Entity.DTO.NewCommentaireDTO;
 import API.Entity.Entity.Chateau;
@@ -100,21 +101,38 @@ UserService userService;
         return null;
     }
 
+
+    /**
+     * convert Commentaire to CommentaireSecureDTO
+     * @param commentaire
+     * @return
+     */
+
+    public CommentaireSecureDTO convertCommentaireToCommentaireSecure(Commentaire commentaire){
+        CommentaireSecureDTO commentaireSecureDTO= new  CommentaireSecureDTO();
+        commentaireSecureDTO.setId(commentaire.getId());
+        commentaireSecureDTO.setCommentaire(commentaire.getCommentaire());
+        commentaireSecureDTO.setCreated_at(commentaire.getCreated_at());
+        commentaireSecureDTO.setChateau(chateauService.convertToSecure(commentaire.getChateau()));
+        commentaireSecureDTO.setUser(userService.convertToSecure(commentaire.getUser()));
+        logger.info("commentaire = " + commentaireSecureDTO.id );
+        return commentaireSecureDTO;
+    }
+
+
+
     /**
      * Convert List Commentaire to List CommentaireSecureDTO
      * @param commentaires
      * @return
      */
-    public List<CommentaireSecureDTO>convertListCommentaireToListCommentaireSecure (List<Commentaire> commentaires){
-        List<CommentaireSecureDTO> commentaireSecureDTOS = new ArrayList<>();
-        CommentaireSecureDTO commentaireSecureDTO = new CommentaireSecureDTO();
+
+    public List<CommentaireSecureDTO>convertListCommentaireToListCommentaireSecure(List<Commentaire> commentaires){
+        List<CommentaireSecureDTO> secureDTOs = new java.util.ArrayList<>();
         for (Commentaire commentaire : commentaires) {
-            commentaireSecureDTO.id = commentaire.getId();
-            commentaireSecureDTO.commentaire = commentaire.getCommentaire();
-            commentaireSecureDTO.setChateau(chateauService.convertToSecure(commentaire.getChateau()));
-            commentaireSecureDTO.setUser(userService.convertToSecure(commentaire.getUser()));
-            commentaireSecureDTOS.add(commentaireSecureDTO);
+            secureDTOs.add(convertCommentaireToCommentaireSecure(commentaire));
         }
-        return commentaireSecureDTOS;
+        return secureDTOs;
     }
+
 }

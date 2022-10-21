@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.impl.crypto.JwtSignatureValidator;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 
@@ -48,11 +49,11 @@ public class JWT {
                 .signWith(signatureAlgorithm, signingKey);
 
         //if it has been specified, let's add the expiration
-       /* if (ttlMillis > 0) {
+        if (ttlMillis > 0) {
             long expMillis = nowMillis + ttlMillis;
             Date exp = new Date(expMillis);
             builder.setExpiration(exp);
-        }*/
+        }
 
         //Builds the JWT and serializes it to a compact, URL-safe string
         return "Bearer " + builder.compact();
@@ -71,6 +72,6 @@ public class JWT {
                 .setSigningKey(DatatypeConverter.parseBase64Binary(SECRET_KEY))
                 .parseClaimsJws(jwt).getBody();
         return claims;
-
     }
+
 }

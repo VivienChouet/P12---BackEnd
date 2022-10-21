@@ -18,6 +18,8 @@ public class Chateau {
    public Integer codePostal;
    public String adresse;
    public String description;
+   public String localisation;
+
 
     @ManyToOne
     private User responsable;

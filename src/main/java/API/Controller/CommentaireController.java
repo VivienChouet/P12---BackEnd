@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin("http://localhost:4200/")
 @RequestMapping("/commentaire")
 public class CommentaireController {
 
@@ -23,6 +24,7 @@ public class CommentaireController {
     CommentaireMapper commentaireMapper;
 
     // Get by chateau_id
+    @CrossOrigin("http://localhost:4200/")
     @GetMapping("/chateau/{id}")
     public ResponseEntity<List<CommentaireSecureDTO>> commentairesByChateau(@PathVariable int id) {
         List<CommentaireSecureDTO> commentaires = commentaireService.findByChateau_Id(id);
@@ -38,6 +40,7 @@ public class CommentaireController {
     }
 
     // post
+    @CrossOrigin("http://localhost:4200")
     @PostMapping("/")
     public ResponseEntity<Commentaire> newCommentaire(@RequestBody NewCommentaireDTO newCommentaireDTO, @RequestHeader("Authorization") String token) {
         Commentaire commentaire = commentaireService.newCommentaire(newCommentaireDTO, token);
@@ -50,13 +53,11 @@ public class CommentaireController {
     // update by creator only
     @PutMapping("/{id}")
     public ResponseEntity<Commentaire> updateCommentaire(@PathVariable int id) {
-
-
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     // delete by Modo / Admin only
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Commentaire> deleteComment(@PathVariable int id) {
         commentaireService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);

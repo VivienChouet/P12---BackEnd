@@ -2,6 +2,7 @@ package API.Service;
 
 import API.Entity.DTO.ChateauSecureDTO;
 import API.Entity.Entity.Chateau;
+import API.Entity.Entity.User;
 import API.Repository.ChateauRepository;
 import API.Utility.LoggingController;
 import org.slf4j.Logger;
@@ -37,6 +38,7 @@ public class ChateauService {
         chateau.setName(chateauDto.getName());
         chateau.setDescription(chateauDto.getDescription());
         chateau.setResponsable(userService.findById(chateauDto.getResponsable().getId()));
+        chateau.setLocalisation(chateauDto.getLocalisation());
         chateauRepository.save(chateau);
         logger.info("save New Chateau = " + chateau.getName());
         return chateau;
@@ -109,8 +111,42 @@ public class ChateauService {
         secureDTO.setNumeroAdresse(chateau.getNumeroAdresse());
         secureDTO.setDescription(chateau.getDescription());
         secureDTO.setResponsable(userService.convertToSecure(chateau.getResponsable()));
-
         logger.info("convert DTO Chateau to a Secure DTO");
         return secureDTO;
     }
+
+    public List<String> listChateauName(){
+        List<String> listChateauName = null;
+        List<Chateau> chateaux = findAll();
+        for (Chateau chateau : chateaux) {
+            listChateauName.add(chateau.getName());
+        }
+        return listChateauName;
+    }
+
+    public List<ChateauSecureDTO>listMyChateau(String token){
+        User user = userService.connectedUserId(token);
+        List<Chateau> MyChateau = chateauRepository.findByResponsable(user);
+        List<ChateauSecureDTO> MyChateauSecure = convertToChateauSecureDTO(MyChateau);
+        return MyChateauSecure;
+    }
+
+    public Chateau updateChateau(String token, ChateauSecureDTO chateauSecureDTO){
+        Chateau oldChateau = findById(chateauSecureDTO.id);
+        User user = userService.connectedUserId(token);
+        if(user == oldChateau.getResponsable()) {
+            oldChateau.setAdresse(chateauSecureDTO.getAdresse());
+            oldChateau.setNumeroAdresse(chateauSecureDTO.getNumeroAdresse());
+            oldChateau.setCodePostal(chateauSecureDTO.getCodePostal());
+            oldChateau.setName(chateauSecureDTO.getName());
+            oldChateau.setDescription(chateauSecureDTO.getDescription());
+            oldChateau.setResponsable(userService.findById(chateauSecureDTO.getResponsable().getId()));
+            oldChateau.setLocalisation(chateauSecureDTO.getLocalisation());
+            chateauRepository.save(oldChateau);
+            logger.info("save New Chateau = " + oldChateau.getName());
+            return oldChateau;
+        }
+    return  null;
+    }
+
 }

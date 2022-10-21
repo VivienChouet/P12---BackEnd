@@ -16,9 +16,13 @@ public class Files {
     private Integer id;
     private String name;
     private String type;
+    private String image;
 
     @Lob
     private byte[] data;
+
+    @ManyToOne
+    private Chateau chateau;
 
 
 }
