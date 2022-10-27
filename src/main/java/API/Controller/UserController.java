@@ -75,8 +75,8 @@ public class UserController {
 
     //TODO: mettre sécurité si le user n'existe pas car actuellement si le user n'existe pas on a une erreur 500
 
-    @CrossOrigin("http://localhost:4200")
-    @PostMapping("/login")
+
+    @PostMapping("api/login")
     public ResponseEntity<User>login(@RequestBody UserDto userDto) {
         System.out.println(userDto );
     User user = userService.loginUser(userDto.email, userDto.password);
@@ -85,7 +85,7 @@ public class UserController {
         }
         return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
     }
-    @CrossOrigin("http://localhost:4200")
+
     @GetMapping("/token")
     public ResponseEntity<UserDto> userToken(@RequestHeader("Authorization") String token) {
         if (token != null) {
@@ -97,7 +97,7 @@ public class UserController {
 
     //TODO : mettre en place la verification du token
 
-    @CrossOrigin("http://localhost:4200")
+
     @GetMapping("/verify/auth")
     public ResponseEntity <Boolean> verificationToken(@RequestHeader("Authorization") String token){
 ;
@@ -111,7 +111,7 @@ public class UserController {
         return new ResponseEntity(false,HttpStatus.NOT_FOUND);
     }
 
-    @CrossOrigin("http://localhost:4200")
+
     @GetMapping("/verify/admin")
     public ResponseEntity<Boolean> verificationAdmin (@RequestHeader("Authorization") String token){
         if(token != null){

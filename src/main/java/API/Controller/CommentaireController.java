@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin("http://localhost:4200/")
-@RequestMapping("/commentaire")
+
+@RequestMapping("api/commentaire")
 public class CommentaireController {
 
     @Autowired
@@ -24,8 +24,7 @@ public class CommentaireController {
     CommentaireMapper commentaireMapper;
 
     // Get by chateau_id
-    @CrossOrigin("http://localhost:4200/")
-    @GetMapping("/chateau/{id}")
+    @GetMapping("api/chateau/{id}")
     public ResponseEntity<List<CommentaireSecureDTO>> commentairesByChateau(@PathVariable int id) {
         List<CommentaireSecureDTO> commentaires = commentaireService.findByChateau_Id(id);
         return new ResponseEntity<>(commentaires, HttpStatus.OK);
@@ -40,7 +39,6 @@ public class CommentaireController {
     }
 
     // post
-    @CrossOrigin("http://localhost:4200")
     @PostMapping("/")
     public ResponseEntity<Commentaire> newCommentaire(@RequestBody NewCommentaireDTO newCommentaireDTO, @RequestHeader("Authorization") String token) {
         Commentaire commentaire = commentaireService.newCommentaire(newCommentaireDTO, token);

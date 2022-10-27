@@ -20,16 +20,15 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@CrossOrigin("http://localhost:4200/")
-@RequestMapping("files/")
+
+@RequestMapping("api/files/")
 public class FileController {
 
     @Autowired
     private FileStorageService fileStorageService;
 
 
-    @CrossOrigin("http://localhost:4200/")
-    @PostMapping("upload/{id}")
+    @PostMapping("api/upload/{id}")
     public ResponseEntity<ResponseMessage> uploadFiles (@RequestParam ("file") MultipartFile files, @PathVariable int id) throws IOException {
         String message = "";
         try {
