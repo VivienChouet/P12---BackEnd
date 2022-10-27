@@ -9,14 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-
 import java.util.List;
 
-
-@CrossOrigin("http://localhost:4200")
 @RestController
-@RequestMapping("/chateau")
+@RequestMapping("api/chateau")
 public class ChateauController {
 
     @Autowired
@@ -28,7 +24,7 @@ public class ChateauController {
 
     @PostMapping("/")
     public ResponseEntity<ChateauDto> newChateau (@RequestBody ChateauSecureDTO chateauDto){
-      //todo securiser cette methode en amdin only
+      //todo securiser cette methode en admin only
         chateauService.saveNewChateau(chateauDto);
         return new ResponseEntity(HttpStatus.ACCEPTED);
     }
@@ -53,7 +49,6 @@ public class ChateauController {
 
     @GetMapping("/search")
     public ResponseEntity<List<ChateauDto>> searchChateauByName (@RequestBody ChateauDto chateauDto){
-        System.out.println("ca plante ici ou après ?");
         List chateaux = chateauService.findByName(chateauDto.getName());
         if (chateaux.size()!=0){
             return new ResponseEntity<>(chateauMapper.toDto(chateaux),HttpStatus.OK);
@@ -65,5 +60,21 @@ public class ChateauController {
     public ResponseEntity<Chateau> deleteChateau (@PathVariable int id){
         chateauService.deleteChateau(id);
         return new ResponseEntity(HttpStatus.OK);
+    }
+
+    @GetMapping("/list/name")
+    public ResponseEntity<List<String>> listNameChateau(){
+        return new ResponseEntity<>(chateauService.listChateauName(), HttpStatus.OK);
+    }
+
+    @GetMapping("/mychateau")
+    public ResponseEntity<List<ChateauSecureDTO>> listMyChateau(@RequestHeader("Authorization") String token){
+        return new ResponseEntity<>(chateauService.listMyChateau(token),HttpStatus.OK);
+    }
+
+    @PostMapping("/update/{id}")
+    public ResponseEntity<ChateauDto> updateChateau (@RequestHeader("Authorization") String token, @RequestBody ChateauSecureDTO chateauSecureDTO ){
+        chateauService.updateChateau(token,chateauSecureDTO);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

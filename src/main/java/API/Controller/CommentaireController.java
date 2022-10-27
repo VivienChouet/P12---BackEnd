@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/commentaire")
+
+@RequestMapping("api/commentaire")
 public class CommentaireController {
 
     @Autowired
@@ -23,7 +24,7 @@ public class CommentaireController {
     CommentaireMapper commentaireMapper;
 
     // Get by chateau_id
-    @GetMapping("/chateau/{id}")
+    @GetMapping("api/chateau/{id}")
     public ResponseEntity<List<CommentaireSecureDTO>> commentairesByChateau(@PathVariable int id) {
         List<CommentaireSecureDTO> commentaires = commentaireService.findByChateau_Id(id);
         return new ResponseEntity<>(commentaires, HttpStatus.OK);
@@ -50,13 +51,11 @@ public class CommentaireController {
     // update by creator only
     @PutMapping("/{id}")
     public ResponseEntity<Commentaire> updateCommentaire(@PathVariable int id) {
-
-
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     // delete by Modo / Admin only
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Commentaire> deleteComment(@PathVariable int id) {
         commentaireService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
