@@ -19,7 +19,7 @@ import java.util.List;
 
 @CrossOrigin("http://localhost:4200")
 @RestController
-@RequestMapping("/user")
+@RequestMapping("api/user")
 public class UserController {
 
     @Autowired
@@ -34,7 +34,7 @@ public class UserController {
      * @param userDto
      * @return user null if email already exist
      */
-    @CrossOrigin("http://localhost:4200")
+
     @PostMapping("/")
     public ResponseEntity<UserDto> newUser (@RequestBody UserDto userDto){
         User user = userService.saveNewUser(userMapper.toEntity(userDto));
@@ -43,7 +43,7 @@ public class UserController {
         }
         return new ResponseEntity<>(HttpStatus.CONFLICT);
     }
-    @CrossOrigin("http://localhost:4200")
+
     @GetMapping("/")
     @Operation(summary = "get Users", description = "Get list of users")
     public ResponseEntity<List<UserDto>> listUser() {
@@ -51,7 +51,8 @@ public class UserController {
         return new ResponseEntity<>(userMapper.toDto(users), HttpStatus.OK);
 
     }
-    @CrossOrigin("http://localhost:4200")
+
+
     @GetMapping("/{id}")
     public ResponseEntity<UserDto> userId(@PathVariable int id) {
         User user = this.userService.findById(id);
@@ -60,13 +61,11 @@ public class UserController {
         }
         return new ResponseEntity<>(userMapper.toDto(user), HttpStatus.OK);
     }
-    @CrossOrigin("http://localhost:4200")
     @PutMapping("/{id}")
     public ResponseEntity<UserDto> updateUser(@PathVariable int id, @RequestBody UserDto userDto) {
         User user = this.userService.update(id, userDto);
         return new ResponseEntity<>(userMapper.toDto(user),HttpStatus.OK);
     }
-    @CrossOrigin("http://localhost:4200")
     @DeleteMapping("/{id}")
     public ResponseEntity<UserDto> deleteUser(@PathVariable int id) {
         userService.delete(id);
@@ -76,9 +75,8 @@ public class UserController {
     //TODO: mettre sécurité si le user n'existe pas car actuellement si le user n'existe pas on a une erreur 500
 
 
-    @PostMapping("api/login")
+    @PostMapping("/login")
     public ResponseEntity<User>login(@RequestBody UserDto userDto) {
-        System.out.println(userDto );
     User user = userService.loginUser(userDto.email, userDto.password);
         if (user != null) {
             return new ResponseEntity<>(user, HttpStatus.OK) ;
@@ -122,5 +120,17 @@ public class UserController {
             return new ResponseEntity<>(false,HttpStatus.UNAUTHORIZED);
         }
         return new ResponseEntity<>(false,HttpStatus.FORBIDDEN);
+    }
+
+    @PostMapping("/verify/author")
+    public ResponseEntity <Boolean> verificationAuthor(@RequestHeader("Authorization") String token, @RequestBody int id){
+    if(token!= null) {
+        Boolean isAuthor = userService.verificationAuthor(token, id);
+        if (isAuthor) {
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+    }
+    return new ResponseEntity<>(HttpStatus.FORBIDDEN);
     }
 }

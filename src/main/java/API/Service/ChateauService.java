@@ -28,7 +28,7 @@ public class ChateauService {
      * @param chateauDto
      * @return
      */
-    public Chateau saveNewChateau(ChateauSecureDTO chateauDto) {
+    public Chateau saveNewChateau(ChateauSecureDTO chateauDto, String token) {
         logger.info("chateau DTO test = " + chateauDto);
         logger.info("Chateau DTO test id = " + chateauDto.getResponsable());
         Chateau chateau = new Chateau();
@@ -37,8 +37,9 @@ public class ChateauService {
         chateau.setCodePostal(chateauDto.getCodePostal());
         chateau.setName(chateauDto.getName());
         chateau.setDescription(chateauDto.getDescription());
-        chateau.setResponsable(userService.findById(chateauDto.getResponsable().getId()));
-        chateau.setLocalisation(chateauDto.getLocalisation());
+        chateau.setResponsable(userService.findUserByToken(token));
+        chateau.setLat(chateau.getLat());
+        chateau.setLng(chateau.getLng());
         chateauRepository.save(chateau);
         logger.info("save New Chateau = " + chateau.getName());
         return chateau;
@@ -108,8 +109,11 @@ public class ChateauService {
         secureDTO.setName(chateau.getName());
         secureDTO.setAdresse(chateau.getAdresse());
         secureDTO.setCodePostal(chateau.getCodePostal());
+        secureDTO.setVille(chateau.getVille());
         secureDTO.setNumeroAdresse(chateau.getNumeroAdresse());
         secureDTO.setDescription(chateau.getDescription());
+        secureDTO.setLat(chateau.getLat());
+        secureDTO.setLng(chateau.getLng());
         secureDTO.setResponsable(userService.convertToSecure(chateau.getResponsable()));
         logger.info("convert DTO Chateau to a Secure DTO");
         return secureDTO;
@@ -138,10 +142,12 @@ public class ChateauService {
             oldChateau.setAdresse(chateauSecureDTO.getAdresse());
             oldChateau.setNumeroAdresse(chateauSecureDTO.getNumeroAdresse());
             oldChateau.setCodePostal(chateauSecureDTO.getCodePostal());
+            oldChateau.setVille(chateauSecureDTO.getVille());
             oldChateau.setName(chateauSecureDTO.getName());
             oldChateau.setDescription(chateauSecureDTO.getDescription());
             oldChateau.setResponsable(userService.findById(chateauSecureDTO.getResponsable().getId()));
-            oldChateau.setLocalisation(chateauSecureDTO.getLocalisation());
+            oldChateau.setLat(chateauSecureDTO.getLat());
+            oldChateau.setLng(chateauSecureDTO.getLng());
             chateauRepository.save(oldChateau);
             logger.info("save New Chateau = " + oldChateau.getName());
             return oldChateau;

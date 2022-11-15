@@ -23,9 +23,9 @@ public class ChateauController {
 
 
     @PostMapping("/")
-    public ResponseEntity<ChateauDto> newChateau (@RequestBody ChateauSecureDTO chateauDto){
+    public ResponseEntity<ChateauDto> newChateau (@RequestBody ChateauSecureDTO chateauDto, @RequestHeader("Authorization") String token){
       //todo securiser cette methode en admin only
-        chateauService.saveNewChateau(chateauDto);
+        chateauService.saveNewChateau(chateauDto, token);
         return new ResponseEntity(HttpStatus.ACCEPTED);
     }
 

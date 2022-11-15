@@ -2,6 +2,8 @@ package API.Entity.Entity;
 
 
 import lombok.Data;
+import sun.security.util.math.IntegerFieldModuloP;
+
 import javax.persistence.*;
 
 @Data
@@ -18,7 +20,9 @@ public class Chateau {
    public Integer codePostal;
    public String adresse;
    public String description;
-   public String localisation;
+   public Double lat;
+   public Double lng;
+   public String ville;
 
 
     @ManyToOne

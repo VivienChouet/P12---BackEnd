@@ -2,7 +2,9 @@ package API.Service;
 
 import API.Entity.DTO.UserDto;
 import API.Entity.DTO.UserSecureDTO;
+import API.Entity.Entity.Chateau;
 import API.Entity.Entity.User;
+import API.Repository.ChateauRepository;
 import API.Repository.UserRepository;
 import API.Utility.LoggingController;
 import API.Utility.Security.JWT;
@@ -27,6 +29,9 @@ public class UserService {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    ChateauRepository chateauRepository;
 
     @Autowired
     PasswordEncoder passwordEncoder;
@@ -216,5 +221,14 @@ public class UserService {
     User user = findUserByToken(token);
     logger.info("Role user : " + user.getRole());
     return user.getRole().equals("ADMIN");
+    }
+
+    public boolean verificationAuthor (String token, int id_chateau){
+        User user = findUserByToken(token);
+        Chateau chateau = chateauRepository.findById(id_chateau).get();
+        if(chateau.getResponsable() == user) {
+            return true;
+        }
+        return false;
     }
 }

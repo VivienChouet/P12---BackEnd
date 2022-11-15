@@ -13,6 +13,8 @@ public class ChateauDto implements Serializable {
     public  Integer codePostal;
     public  String adresse;
     public  String description;
-    public  String localisation;
+    public  Double lat;
+    public  Double lng;
+    public  String ville;
     public  UserDto responsable;
 }

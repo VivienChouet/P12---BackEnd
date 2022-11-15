@@ -24,7 +24,7 @@ public class CommentaireController {
     CommentaireMapper commentaireMapper;
 
     // Get by chateau_id
-    @GetMapping("api/chateau/{id}")
+    @GetMapping("/chateau/{id}")
     public ResponseEntity<List<CommentaireSecureDTO>> commentairesByChateau(@PathVariable int id) {
         List<CommentaireSecureDTO> commentaires = commentaireService.findByChateau_Id(id);
         return new ResponseEntity<>(commentaires, HttpStatus.OK);
@@ -55,7 +55,7 @@ public class CommentaireController {
     }
 
     // delete by Modo / Admin only
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/chateau/{id}")
     public ResponseEntity<Commentaire> deleteComment(@PathVariable int id) {
         commentaireService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
