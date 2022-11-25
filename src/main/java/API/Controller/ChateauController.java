@@ -5,9 +5,11 @@ import API.Entity.DTO.ChateauSecureDTO;
 import API.Entity.Entity.Chateau;
 import API.Entity.Mapper.ChateauMapper;
 import API.Service.ChateauService;
+import API.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -17,6 +19,9 @@ public class ChateauController {
 
     @Autowired
     ChateauService chateauService;
+
+    @Autowired
+    UserService userService;
 
     @Autowired
     ChateauMapper chateauMapper;
@@ -57,9 +62,12 @@ public class ChateauController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Chateau> deleteChateau (@PathVariable int id){
-        chateauService.deleteChateau(id);
-        return new ResponseEntity(HttpStatus.OK);
+    public ResponseEntity<Chateau> deleteChateau (@PathVariable int id, @RequestHeader("Authorization") String token){
+        if(userService.verificationAdmin(token)){
+            chateauService.deleteChateau(id);
+            return new ResponseEntity(HttpStatus.OK);
+        }
+return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
     }
 
     @GetMapping("/list/name")

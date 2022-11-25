@@ -39,8 +39,6 @@ public class FileStorageService {
         return fileDB;
     }
 
-    // TODO : Ajouter un service permettant d'associer les fichiers avec un chateau
-
     public Files getFile (Integer id){
         logger.info("get file Id : " + id);
         return fileRepository.findById(id).get();

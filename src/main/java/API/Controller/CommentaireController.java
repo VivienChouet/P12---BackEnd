@@ -5,6 +5,7 @@ import API.Entity.DTO.NewCommentaireDTO;
 import API.Entity.Entity.Commentaire;
 import API.Entity.Mapper.CommentaireMapper;
 import API.Service.CommentaireService;
+import API.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,9 @@ public class CommentaireController {
 
     @Autowired
     CommentaireService commentaireService;
+
+    @Autowired
+    UserService userService;
 
     @Autowired
     CommentaireMapper commentaireMapper;
@@ -56,9 +60,12 @@ public class CommentaireController {
 
     // delete by Modo / Admin only
     @DeleteMapping("/chateau/{id}")
-    public ResponseEntity<Commentaire> deleteComment(@PathVariable int id) {
-        commentaireService.delete(id);
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<Commentaire> deleteComment(@PathVariable int id ,@RequestHeader("Authorization") String token) {
+        if(userService.verificationAdmin(token)) {
+            commentaireService.delete(id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
     }
 
 
