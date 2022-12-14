@@ -38,8 +38,8 @@ public class ChateauService {
         chateau.setName(chateauDto.getName());
         chateau.setDescription(chateauDto.getDescription());
         chateau.setResponsable(userService.findUserByToken(token));
-        chateau.setLat(chateau.getLat());
-        chateau.setLng(chateau.getLng());
+        chateau.setLat(chateauDto.getLat());
+        chateau.setLng(chateauDto.getLng());
         chateauRepository.save(chateau);
         logger.info("save New Chateau = " + chateau.getName());
         return chateau;
@@ -136,6 +136,7 @@ public class ChateauService {
     }
 
     public Chateau updateChateau(String token, ChateauSecureDTO chateauSecureDTO){
+        logger.info("chateau DTO test = " + chateauSecureDTO.name + "id du chateau : " + chateauSecureDTO.id);
         Chateau oldChateau = findById(chateauSecureDTO.id);
         User user = userService.connectedUserId(token);
         if(user == oldChateau.getResponsable()) {
@@ -145,7 +146,7 @@ public class ChateauService {
             oldChateau.setVille(chateauSecureDTO.getVille());
             oldChateau.setName(chateauSecureDTO.getName());
             oldChateau.setDescription(chateauSecureDTO.getDescription());
-            oldChateau.setResponsable(userService.findById(chateauSecureDTO.getResponsable().getId()));
+            oldChateau.setResponsable(userService.findUserByToken(token));
             oldChateau.setLat(chateauSecureDTO.getLat());
             oldChateau.setLng(chateauSecureDTO.getLng());
             chateauRepository.save(oldChateau);

@@ -1,71 +1,1467 @@
-2022-11-25 [restartedMain] INFO  API.APIApplication - Starting APIApplication using Java 1.8.0_261 on DESKTOP-IIRVTB3 with PID 23548 (E:\Programation\Projet\Projet-12\Back\target\classes started by vivie in E:\Programation\Projet\Projet-12\Back)
-2022-11-25 [restartedMain] INFO  API.APIApplication - No active profile set, falling back to default profiles: default
-2022-11-25 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-11-25 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-11-25 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-11-25 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 5 JPA repository interfaces.
-2022-11-25 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2022-11-25 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2022-11-25 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-11-25 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2022-11-25 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3141 ms
-2022-11-25 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2022-11-25 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2022-11-25 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-11-25 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
-2022-11-25 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-11-25 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-11-25 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-11-25 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-11-25 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-11-25 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+2022-12-12 [restartedMain] INFO  API.APIApplication - Starting APIApplication using Java 1.8.0_261 on DESKTOP-IIRVTB3 with PID 15984 (E:\Programation\Projet\Projet-12\Back\target\classes started by vivie in E:\Programation\Projet\Projet-12\Back)
+2022-12-12 [restartedMain] INFO  API.APIApplication - No active profile set, falling back to default profiles: default
+2022-12-12 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-12 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-12 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-12 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 5 JPA repository interfaces.
+2022-12-12 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-12-12 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-12-12 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-12-12 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-12-12 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2097 ms
+2022-12-12 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-12-12 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-12-12 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-12 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-12-12 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-12 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-12-12 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-12 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-12 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-12 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
 
-Using generated security password: ff8b38ac-d220-4d99-a208-6d02372b8596
+Using generated security password: d33c77b0-ed06-4873-9e33-27281b850a5c
 
-2022-11-25 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@172e75a, org.springframework.security.web.context.SecurityContextPersistenceFilter@19fa13b, org.springframework.security.web.header.HeaderWriterFilter@a3c3f2, org.springframework.security.web.authentication.logout.LogoutFilter@dd611d, API.Utility.Security.JWTAuthorizationFilter@11aee03, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7db5b2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@186d82a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40cfa8, org.springframework.security.web.session.SessionManagementFilter@16c3553, org.springframework.security.web.access.ExceptionTranslationFilter@e5b697, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c3ea5c]
-2022-11-25 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2022-11-25 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2022-11-25 [restartedMain] INFO  API.APIApplication - Started APIApplication in 8.22 seconds (JVM running for 9.493)
-2022-11-25 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-11-25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2022-11-25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2022-11-25 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - Find all Chateau 
-2022-11-25 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
-2022-11-25 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
-2022-11-25 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
-2022-11-25 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
-2022-11-25 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
-2022-11-25 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
-2022-11-25 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
-2022-11-25 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
-2022-11-25 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
-2022-11-25 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
-2022-11-25 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 11
-2022-11-25 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
-2022-11-25 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 8
-2022-11-25 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
-2022-11-25 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
-2022-11-25 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
-2022-11-25 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - commentaire = 9
-2022-11-25 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - Chateau Find By id : 8
-2022-11-25 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
-2022-11-25 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
-2022-11-25 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
-2022-11-25 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 8
-2022-11-25 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - Chateau Find By id : 8
-2022-11-25 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
-2022-11-25 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
-2022-11-25 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
-2022-11-25 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - commentaire = 9
-2022-11-25 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
-2022-11-25 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
-2022-11-25 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
-2022-11-25 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - Chateau Find By id : 8
-2022-11-25 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 8
-2022-11-25 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
-2022-11-25 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
-2022-11-25 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
-2022-11-25 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
-2022-11-25 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
-2022-11-25 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - commentaire = 9
-2022-11-25 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ddb07a, org.springframework.security.web.context.SecurityContextPersistenceFilter@34d6f5, org.springframework.security.web.header.HeaderWriterFilter@122b344, org.springframework.security.web.authentication.logout.LogoutFilter@da5e1, API.Utility.Security.JWTAuthorizationFilter@1e49cc9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1873bb1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@119399f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5caf96, org.springframework.security.web.session.SessionManagementFilter@381aca, org.springframework.security.web.access.ExceptionTranslationFilter@108f9a7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@174f8f4]
+2022-12-12 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-12-12 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-12 [restartedMain] INFO  API.APIApplication - Started APIApplication in 6.094 seconds (JVM running for 6.942)
+2022-12-12 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-12 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-12-12 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670836950, authorities=[ROLE_USER], exp=1670836986}
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration du token dans : 34
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670836950, authorities=[ROLE_USER], exp=1670836986}
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - expiration du token dans : 33
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670836950, authorities=[ROLE_USER], exp=1670836986}
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration du token dans : 30
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 19
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - Chateau Find By id : 19
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 19
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - Chateau Find By id : 19
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670836950, authorities=[ROLE_USER], exp=1670836986}
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - expiration du token dans : 1
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-12 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-12-12 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-12-12 [restartedMain] INFO  API.APIApplication - Starting APIApplication using Java 1.8.0_261 on DESKTOP-IIRVTB3 with PID 10504 (E:\Programation\Projet\Projet-12\Back\target\classes started by vivie in E:\Programation\Projet\Projet-12\Back)
+2022-12-12 [restartedMain] INFO  API.APIApplication - No active profile set, falling back to default profiles: default
+2022-12-12 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-12 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-12 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-12 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 5 JPA repository interfaces.
+2022-12-12 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-12-12 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-12-12 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-12-12 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-12-12 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1494 ms
+2022-12-12 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-12-12 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-12-12 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-12 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-12-12 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-12 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-12-12 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-12 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-12 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-12 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: eaded612-c20a-4dc4-92e5-dfa395d0510b
+
+2022-12-12 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e74bca, org.springframework.security.web.context.SecurityContextPersistenceFilter@178a9e3, org.springframework.security.web.header.HeaderWriterFilter@143c536, org.springframework.security.web.authentication.logout.LogoutFilter@ed95d9, API.Utility.Security.JWTAuthorizationFilter@14c5976, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d66dc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@14ce0c0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c37280, org.springframework.security.web.session.SessionManagementFilter@19ac0b0, org.springframework.security.web.access.ExceptionTranslationFilter@aed3ca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b7284d]
+2022-12-12 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-12-12 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-12 [restartedMain] INFO  API.APIApplication - Started APIApplication in 5.209 seconds (JVM running for 5.9)
+2022-12-12 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-12 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-12-12 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670837352, authorities=[ROLE_USER], exp=1670837388}
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration du token dans : 33
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670837449, authorities=[ROLE_USER], exp=1670837485}
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration du token dans : 34
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670837449, authorities=[ROLE_USER], exp=1670837485}
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - expiration du token dans : 33
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670837531, authorities=[ROLE_USER], exp=1670837567}
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - expiration du token dans : 34
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670837586, authorities=[ROLE_USER], exp=1670837622}
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - expiration du token dans : 35
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670837700, authorities=[ROLE_USER], exp=1670837736}
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration du token dans : 34
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670837700, authorities=[ROLE_USER], exp=1670837736}
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - expiration du token dans : 33
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670837813, authorities=[ROLE_USER], exp=1670837849}
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration du token dans : 34
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670837868, authorities=[ROLE_USER], exp=1670837904}
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration du token dans : 33
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670837993, authorities=[ROLE_USER], exp=1670838029}
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - expiration du token dans : 33
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - check login failed
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670838080, authorities=[ROLE_USER], exp=1670838116}
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration du token dans : 34
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670838126, authorities=[ROLE_USER], exp=1670838162}
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - expiration du token dans : 34
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670838126, authorities=[ROLE_USER], exp=1670838162}
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration du token dans : 22
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670838126, authorities=[ROLE_USER], exp=1670838162}
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - expiration du token dans : 19
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 8
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - Chateau Find By id : 8
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - commentaire = 9
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - Role user : ADMIN
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670838126, authorities=[ROLE_USER], exp=1670838162}
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - expiration du token dans : 11
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670838126, authorities=[ROLE_USER], exp=1670838162}
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - expiration du token dans : 9
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670838126, authorities=[ROLE_USER], exp=1670838162}
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - expiration du token dans : 7
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670838226, authorities=[ROLE_USER], exp=1670838262}
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration du token dans : 34
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - chateau DTO test = nullid du chateau : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - save New Chateau = null
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670838226, authorities=[ROLE_USER], exp=1670838262}
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - expiration du token dans : 13
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670838226, authorities=[ROLE_USER], exp=1670838262}
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - expiration du token dans : 8
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - chateau DTO test = chateau du coureauid du chateau : 10
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - save New Chateau = chateau du coureau
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670838269, authorities=[ROLE_USER], exp=1670838305}
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - expiration du token dans : 34
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670838386, authorities=[ROLE_USER], exp=1670838422}
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - expiration du token dans : 31
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670838386, authorities=[ROLE_USER], exp=1670838422}
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - expiration du token dans : 30
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670838386, authorities=[ROLE_USER], exp=1670838422}
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration du token dans : 30
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 8
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - commentaire = 9
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - Chateau Find By id : 8
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 8
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - commentaire = 9
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - Chateau Find By id : 8
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 8
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - Chateau Find By id : 8
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - commentaire = 9
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - Chateau Find By id : 8
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 8
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - commentaire = 9
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845639, authorities=[ROLE_USER], exp=1670845675}
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration du token dans : 33
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845639, authorities=[ROLE_USER], exp=1670845675}
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - expiration du token dans : 32
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - Verification auteur : Test 01 sur le chateau : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - Chateau Find By id : 8
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 8
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - commentaire = 9
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - Role user : ADMIN
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 8
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - Chateau Find By id : 8
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - commentaire = 9
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - check login in progress
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - Check login success
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845861, authorities=[ROLE_USER], exp=1670845897}
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration du token dans : 35
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845861, authorities=[ROLE_USER], exp=1670845897}
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration du token dans : 32
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - email recherché : test@test
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - user trouvé : User(id=9, firstName=Test 01, lastName=Test 01, email=test@test, password=$2a$10$ZrlJOQI74NQO6qqR.O9nUOsOSPHBWaY5B25iV06iAXgb9wwOz3jxW, token=null, role=ADMIN)
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845861, authorities=[ROLE_USER], exp=1670845897}
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration du token dans : 29
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - Chateau Find By id : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845861, authorities=[ROLE_USER], exp=1670845897}
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration du token dans : 21
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845861, authorities=[ROLE_USER], exp=1670845897}
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - expiration du token dans : 20
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845861, authorities=[ROLE_USER], exp=1670845897}
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration du token dans : 19
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845861, authorities=[ROLE_USER], exp=1670845897}
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - expiration du token dans : 18
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845861, authorities=[ROLE_USER], exp=1670845897}
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - expiration du token dans : 16
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845861, authorities=[ROLE_USER], exp=1670845897}
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - expiration du token dans : 15
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845861, authorities=[ROLE_USER], exp=1670845897}
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - expiration du token dans : 14
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845861, authorities=[ROLE_USER], exp=1670845897}
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - expiration du token dans : 13
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845861, authorities=[ROLE_USER], exp=1670845897}
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - expiration du token dans : 8
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845861, authorities=[ROLE_USER], exp=1670845897}
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - expiration du token dans : 7
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845861, authorities=[ROLE_USER], exp=1670845897}
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - expiration du token dans : 3
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - expiration jwt = {jti=id, sub=test@test, iat=1670845861, authorities=[ROLE_USER], exp=1670845897}
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - expiration du token dans : 2
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - Find all Chateau 
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8
+2022-12-12 [http-nio-8080-exec-10] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 9
+2022-12-12 [http-nio-8080-exec-5] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 15
+2022-12-12 [http-nio-8080-exec-4] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 10
+2022-12-12 [http-nio-8080-exec-6] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 17
+2022-12-12 [http-nio-8080-exec-9] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 18
+2022-12-12 [http-nio-8080-exec-7] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 16
+2022-12-12 [http-nio-8080-exec-3] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 19
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - Chateau Find By id : 8
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-2] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - find commentaire by Chateau-id : 8
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert DTO Chateau to a Secure DTO
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - convert to Secure User
+2022-12-12 [http-nio-8080-exec-8] INFO  API.Utility.LoggingController - commentaire = 9
+2022-12-12 [http-nio-8080-exec-1] INFO  API.Utility.LoggingController - files by chateau id sans streamn : 8

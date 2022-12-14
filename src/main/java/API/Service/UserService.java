@@ -153,7 +153,7 @@ public class UserService {
             user.setRole(userDTO.getRole());
         }
         userRepository.save(user);
-        String token = JWT.createJWT(user.getEmail(), 36000);
+        String token = JWT.createJWT(user.getEmail(), 600000 );
         user.setToken(token);
         logger.info("user : " + user.getFirstName() + " mis a jour");
         return user;
@@ -225,6 +225,7 @@ public class UserService {
 
     public boolean verificationAuthor (String token, int id_chateau){
         User user = findUserByToken(token);
+        logger.info("Verification auteur : " + user.getFirstName() + " sur le chateau : " + id_chateau);
         Chateau chateau = chateauRepository.findById(id_chateau).get();
         if(chateau.getResponsable() == user) {
             return true;

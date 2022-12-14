@@ -1,15 +1,18 @@
 package API.Controller;
 
 import API.Entity.DTO.UserDto;
+import API.Entity.DTO.UserSecureDTO;
 import API.Entity.Entity.User;
 import API.Entity.Mapper.UserMapper;
 import API.Service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.Console;
 import java.util.List;
 
 @CrossOrigin("http://localhost:4200")
@@ -110,7 +113,6 @@ public class UserController {
         return new ResponseEntity(false, HttpStatus.NOT_FOUND);
     }
 
-
     @GetMapping("/verify/admin")
     public ResponseEntity<Boolean> verificationAdmin(@RequestHeader("Authorization") String token) {
         if (token != null) {
@@ -123,15 +125,22 @@ public class UserController {
         return new ResponseEntity<>(false, HttpStatus.FORBIDDEN);
     }
 
-    @PostMapping("/verify/author")
-    public ResponseEntity<Boolean> verificationAuthor(@RequestHeader("Authorization") String token, @RequestBody int id) {
+    @GetMapping("/verify/author/{id}")
+    public ResponseEntity<Boolean> verificationAuthor(@RequestHeader("Authorization") String token, @PathVariable int id) {
         if (token != null) {
             Boolean isAuthor = userService.verificationAuthor(token, id);
-            if (isAuthor) {
-                return new ResponseEntity<>(HttpStatus.OK);
+            if (isAuthor == true) {
+                return new ResponseEntity<>(true,HttpStatus.OK);
             }
-            return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>(false,HttpStatus.UNAUTHORIZED);
         }
-        return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        return new ResponseEntity<>(false,HttpStatus.FORBIDDEN);
+    }
+
+    @GetMapping("/verify/getuserconnected")
+    public ResponseEntity<UserSecureDTO> getUserConnected (@RequestHeader("Authorization") String token) {
+        User user = userService.findUserByToken(token);
+        UserSecureDTO userSecureDTO = userService.convertToSecure(user);
+        return new ResponseEntity<>(userSecureDTO , HttpStatus.OK);
     }
 }
