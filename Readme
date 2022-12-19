@@ -1,0 +1,61 @@
+<h1 align="center"> P 12 </h1> <br>
+
+<p align="center">
+  API pour le projet 12 d'OpenClassroom
+</p>
+
+
+## Table of content
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Quick Start](#quick-start)
+- [Testing](#testing)
+- [API](#requirements)
+- [Acknowledgements](#acknowledgements)
+
+
+
+
+## Introduction
+
+
+Ceci est l'api concernant le projet 12 de openClassroom dans le cadre de la formation de devellopeur java.
+Cette API à été concu pour recenser et mettre en avant les chateaux viticoles.
+
+## Features
+
+* Gestion ajout / update / visualisation des chateaux
+* Gestion de fichier d'image
+* Securiser avec JWT
+
+
+## Requirements
+L'application a été develloper pour tourner en local
+
+
+### Local
+* [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [Maven](https://maven.apache.org/download.cgi)
+
+
+
+## Quick Start
+Verifier que la clé JWT est correctement configurer, et lancer le serveur en local.
+
+### Run Local
+```bash
+$ mvn spring-boot:run
+```
+
+Application utiliser par defaut le port `8080`
+
+
+## Testing
+
+
+## API
+
+
+## Acknowledgements

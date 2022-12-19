@@ -5,8 +5,6 @@ import API.Entity.DTO.UserSecureDTO;
 import API.Entity.Entity.User;
 import API.Entity.Mapper.UserMapper;
 import API.Service.UserService;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -44,7 +42,6 @@ public class UserController {
     }
 
     @GetMapping("/")
-    @Operation(summary = "get Users", description = "Get list of users")
     public ResponseEntity<List<UserDto>> listUser() {
         List<User> users = this.userService.findAll();
         return new ResponseEntity<>(userMapper.toDto(users), HttpStatus.OK);
@@ -102,15 +99,16 @@ public class UserController {
 
     @GetMapping("/verify/auth")
     public ResponseEntity<Boolean> verificationToken(@RequestHeader("Authorization") String token) {
-        ;
-        if (token != null) {
+        if (token.length() > 2) {
             Long expiresIn = userService.verificationToken(token);
             if (expiresIn != null && expiresIn > 0) {
                 return new ResponseEntity<>(true, HttpStatus.OK);
             }
-            return new ResponseEntity<>(false, HttpStatus.FORBIDDEN);
+            if(token == null){
+                return new ResponseEntity<>(false, HttpStatus.FORBIDDEN);
+            }
         }
-        return new ResponseEntity(false, HttpStatus.NOT_FOUND);
+        return new ResponseEntity(false, HttpStatus.FORBIDDEN);
     }
 
     @GetMapping("/verify/admin")

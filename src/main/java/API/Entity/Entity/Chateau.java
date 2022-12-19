@@ -2,7 +2,6 @@ package API.Entity.Entity;
 
 
 import lombok.Data;
-import sun.security.util.math.IntegerFieldModuloP;
 
 import javax.persistence.*;
 

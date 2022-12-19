@@ -49,7 +49,7 @@ public class JWT {
                 .signWith(signatureAlgorithm, signingKey);
 
         //if it has been specified, let's add the expiration
-        if (ttlMillis > 0) {
+    if (ttlMillis > 0) {
             long expMillis = nowMillis + ttlMillis;
             Date exp = new Date(expMillis);
             builder.setExpiration(exp);

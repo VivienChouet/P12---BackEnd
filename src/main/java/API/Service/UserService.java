@@ -91,7 +91,7 @@ public class UserService {
         if (passwordEncoder.matches(password, user1.getPassword())) {
             User user = new User();
             user.setId(user1.getId());
-            String token = createJWT(email, 36000);
+            String token = createJWT(email, 360000);
             user.setToken(token);
             logger.info("Check login success");
             return user;
@@ -153,7 +153,7 @@ public class UserService {
             user.setRole(userDTO.getRole());
         }
         userRepository.save(user);
-        String token = JWT.createJWT(user.getEmail(), 600000 );
+        String token = JWT.createJWT(user.getEmail(), 360000 );
         user.setToken(token);
         logger.info("user : " + user.getFirstName() + " mis a jour");
         return user;
@@ -210,7 +210,7 @@ public class UserService {
         String jwtToken = token.replace("Bearer ", "");
         Date currently = new Date();
         logger.info("expiration jwt = " + decodeJWT(jwtToken));
-        long diff =decodeJWT(jwtToken).getExpiration().getTime() - currently.getTime();
+        long diff = decodeJWT(jwtToken).getExpiration().getTime() - currently.getTime();
         TimeUnit time = TimeUnit.SECONDS;
         long difference = time.convert(diff, TimeUnit.MILLISECONDS);
         logger.info("expiration du token dans : " + difference);
@@ -227,9 +227,6 @@ public class UserService {
         User user = findUserByToken(token);
         logger.info("Verification auteur : " + user.getFirstName() + " sur le chateau : " + id_chateau);
         Chateau chateau = chateauRepository.findById(id_chateau).get();
-        if(chateau.getResponsable() == user) {
-            return true;
-        }
-        return false;
+        return chateau.getResponsable() == user;
     }
 }
