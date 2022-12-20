@@ -1,0 +1,3 @@
+INSERT INTO projet12.user (id, first_name, last_name, email, password, token, role) VALUES (14, 'User 1', 'User 1', 'user1@test', '$2a$10$pb/KEikCxyCz5bUtu/tyHePIcUDdcsOFJiUF6FaRGhdTSQ.izoH9y', null, 'USER');
+INSERT INTO projet12.user (id, first_name, last_name, email, password, token, role) VALUES (15, 'User2', 'user2', 'user2@test', '$2a$10$U4rAYkiq0hutxWu.1iOFSeGPd6eanHJ0IanteFU./ewcrTHjn.lRC', null, 'USER');
+INSERT INTO projet12.user (id, first_name, last_name, email, password, token, role) VALUES (16, 'Admin', 'admin', 'admin@admin', '$2a$10$bgRfQ2NZD5h.OB3xKtsc2.XWBsWHwubqkBCOQq0BrOuoY/YxVCeYq', null, 'ADMIN');

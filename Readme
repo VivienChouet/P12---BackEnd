@@ -11,9 +11,7 @@
 - [Features](#features)
 - [Requirements](#requirements)
 - [Quick Start](#quick-start)
-- [Testing](#testing)
-- [API](#requirements)
-- [Acknowledgements](#acknowledgements)
+
 
 
 
@@ -39,10 +37,23 @@ L'application a été develloper pour tourner en local
 * [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Maven](https://maven.apache.org/download.cgi)
 
-
-
 ## Quick Start
-Verifier que la clé JWT est correctement configurer, et lancer le serveur en local.
+
+#### MySQL
+Renseignez l'adresse ainsi que vos identifiant MySQL dans le fichier Ressources/properties
+```bash
+spring.datasource.url= `Url`
+spring.datasource.username= `Username`
+spring.datasource.password= `Password`
+```
+
+#### Maven
+Ouvrez votre Terminal et assurez vous d'être dans le dossier Back et rentrez :
+
+```bash
+$ mvn clean
+$ mvn install
+```
 
 ### Run Local
 ```bash
@@ -51,11 +62,3 @@ $ mvn spring-boot:run
 
 Application utiliser par defaut le port `8080`
 
-
-## Testing
-
-
-## API
-
-
-## Acknowledgements

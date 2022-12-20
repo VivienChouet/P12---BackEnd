@@ -136,7 +136,7 @@ public class ChateauService {
     }
 
     public Chateau updateChateau(String token, ChateauSecureDTO chateauSecureDTO){
-        logger.info("chateau DTO test = " + chateauSecureDTO.name + "id du chateau : " + chateauSecureDTO.id);
+        logger.info("chateau DTO test = " + chateauSecureDTO.toString());
         Chateau oldChateau = findById(chateauSecureDTO.id);
         User user = userService.connectedUserId(token);
         if(user == oldChateau.getResponsable()) {

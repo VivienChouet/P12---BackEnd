@@ -120,7 +120,7 @@ public class UserController {
             }
             return new ResponseEntity<>(false, HttpStatus.UNAUTHORIZED);
         }
-        return new ResponseEntity<>(false, HttpStatus.FORBIDDEN);
+        return new ResponseEntity<>(false, HttpStatus.UNAUTHORIZED);
     }
 
     @GetMapping("/verify/author/{id}")
