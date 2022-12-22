@@ -45,9 +45,7 @@ public class UserController {
     public ResponseEntity<List<UserDto>> listUser() {
         List<User> users = this.userService.findAll();
         return new ResponseEntity<>(userMapper.toDto(users), HttpStatus.OK);
-
     }
-
 
     @GetMapping("/{id}")
     public ResponseEntity<UserDto> userId(@PathVariable int id) {
@@ -73,9 +71,6 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
     }
 
-    //TODO: mettre sécurité si le user n'existe pas car actuellement si le user n'existe pas on a une erreur 500
-
-
     @PostMapping("/login")
     public ResponseEntity<User> login(@RequestBody UserDto userDto) {
         User user = userService.loginUser(userDto.email, userDto.password);
@@ -93,9 +88,6 @@ public class UserController {
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
-
-    //TODO : mettre en place la verification du token
-
 
     @GetMapping("/verify/auth")
     public ResponseEntity<Boolean> verificationToken(@RequestHeader("Authorization") String token) {

@@ -27,22 +27,20 @@ public class CommentaireController {
     @Autowired
     CommentaireMapper commentaireMapper;
 
-    // Get by chateau_id
     @GetMapping("/chateau/{id}")
     public ResponseEntity<List<CommentaireSecureDTO>> commentairesByChateau(@PathVariable int id) {
         List<CommentaireSecureDTO> commentaires = commentaireService.findByChateau_Id(id);
         return new ResponseEntity<>(commentaires, HttpStatus.OK);
     }
 
-    // get by user_id en admin / modo only
-    //todo : méthode a sécuriser modo / admin only.
+
     @GetMapping("/gestion/{id}")
     public ResponseEntity<List<CommentaireSecureDTO>> commentaireByUser_Id(@PathVariable int id) {
         List<CommentaireSecureDTO> commentaires = commentaireService.findByUser_Id(id);
         return new ResponseEntity<>(commentaires, HttpStatus.OK);
     }
 
-    // post
+
     @PostMapping("/")
     public ResponseEntity<Commentaire> newCommentaire(@RequestBody NewCommentaireDTO newCommentaireDTO, @RequestHeader("Authorization") String token) {
         Commentaire commentaire = commentaireService.newCommentaire(newCommentaireDTO, token);
@@ -52,13 +50,13 @@ public class CommentaireController {
         return new ResponseEntity<>(HttpStatus.CONFLICT);
     }
 
-    // update by creator only
+
     @PutMapping("/{id}")
     public ResponseEntity<Commentaire> updateCommentaire(@PathVariable int id) {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    // delete by Modo / Admin only
+
     @DeleteMapping("/chateau/{id}")
     public ResponseEntity<Commentaire> deleteComment(@PathVariable int id ,@RequestHeader("Authorization") String token) {
         if(userService.verificationAdmin(token)) {
@@ -68,8 +66,6 @@ public class CommentaireController {
         return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
     }
 
-
-    // update report by user
 
 
 }
