@@ -76,7 +76,6 @@ public class ChateauService {
         return  chateaux;
     }
 
-    // convert a list of chateau to a list of chateauSecureDTO
 
     /**
      * Convert list Chateau to list ChateauSecureDTO

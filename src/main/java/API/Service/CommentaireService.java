@@ -87,8 +87,6 @@ public class CommentaireService {
         logger.info("delete commente id : " + id);
     }
 
-    //Update commentaire if user is the owner
-
     /**
      * Update commentaire
      *
@@ -140,5 +138,5 @@ public class CommentaireService {
         }
         return secureDTOs;
     }
-    // ajouter une fonction isAuthor @header authorization token + chateau.id
+
 }

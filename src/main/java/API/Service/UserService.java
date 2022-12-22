@@ -185,8 +185,6 @@ public class UserService {
         return secureDTO;
     }
 
-    //return id of user connected
-
     /**
      * return user of user connected
      *
